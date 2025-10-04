@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch Using JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main stopwatch container (centered via CSS Flexbox) -->
+    <div class="stopwatch">
+      <!-- Timer display area showing elapsed time in HH:MM:SS -->
+      <div id="timeDisplay" class="display">00:00:00:00</div>
+
+      <!-- Control buttons: Start, Stop, and Reset -->
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="resetBtn">Reset</button>
+        <button id="lapBtn">Lap</button>
+        <button id="toggleThemeBtn">Toggle Theme</button>
+      </div>
+
+      <!-- Laps section-->
+      <div class="laps" id="laps"></div>
+    </div>
+
+    <!-- Link to the external JavaScript file that contains the stopwatch logic -->
+    <script src="script.js"></script>
+  </body>
+</html>
