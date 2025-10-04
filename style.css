@@ -1,63 +1,63 @@
 /* Base styles for the entire page */
-body { 
-  margin: 0;                            
-  height: 100vh;                        
-  font-family: 'Courier New', monospace; 
-  background: #111;                    
-  color: #0f0;                         
-  display: flex;                       
-  align-items: center;                 
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Courier New", monospace;
+  background: #111;
+  color: #0f0;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  transition: background 0.3s, color 0.3s;            
+  transition: background 0.3s, color 0.3s;
 }
 
 /* Stopwatch container, organized vertically and centered */
 .stopwatch {
-  display: flex;                       
-  flex-direction: column;             
-  align-items: center;                
-  gap: 20px;                           
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Style for the digital time display */
 .display {
-  font-size: 4rem;                     
-  background: #000;                   
-  padding: 20px 40px;                 
-  border: 3px solid #0f0;             
-  border-radius: 10px;                
-  box-shadow: 0 0 20px #0f0;          
-  letter-spacing: 2px;                
-  min-width: 260px;                   
-  text-align: center;                 
+  font-size: 4rem;
+  background: #000;
+  padding: 20px 40px;
+  border: 3px solid #0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0f0;
+  letter-spacing: 2px;
+  min-width: 260px;
+  text-align: center;
 }
 
 /* Container for the buttons */
 .controls {
-  display: flex;                       
+  display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  justify-content: center;                           
+  justify-content: center;
 }
 
 /* General button styling */
 button {
-  font-size: 1.2rem;                  
-  padding: 10px 20px;                
-  border: 2px solid #0f0;            
-  background: #000;                  
-  color: #0f0;                       
-  cursor: pointer;                   
-  border-radius: 5px;                
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: 2px solid #0f0;
+  background: #000;
+  color: #0f0;
+  cursor: pointer;
+  border-radius: 5px;
   transition: all 0.3s ease;
-  min-width:90px;
-  text-align: center;         
+  min-width: 90px;
+  text-align: center;
 }
 
 /* Hover effect for buttons */
 button:hover {
-  background: #0f0;                  
-  color: #000;                       
+  background: #0f0;
+  color: #000;
 }
 
 /* ==========================
@@ -133,6 +133,53 @@ body.light .laps p {
   border-bottom: 1px dashed #555;
 }
 
-@media only screen {
-  
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  .display {
+    font-size: 3rem;
+    padding: 15px 30px;
+    min-width: 220px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+    min-width: 80px;
+  }
+
+  .laps {
+    max-width: 280px;
+    font-size: 0.9rem;
+  }
 }
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .display {
+    font-size: 2.4rem;
+    padding: 10px 20px;
+    min-width: 180px;
+  }
+
+  .controls {
+    gap: 10px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    min-width: 70px;
+  }
+
+  .laps {
+    max-width: 240px;
+    max-height: 150px;
+    font-size: 0.85rem;
+  }
+}
+
